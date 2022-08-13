@@ -1,5 +1,4 @@
-
-name: Generate Datas
+name: generate animation
 
 on:
   # Run automatically every 6 hours
@@ -15,9 +14,10 @@ on:
     - master
 
 jobs:
-  build:
-    name: Jobs to update datas
+  generate:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
     steps:
       # Snake Animation
       - name: generate github-contribution-grid-snake.svg
